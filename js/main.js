@@ -66,4 +66,16 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
+  /* ---- Logo marquee: pause on tap (touch devices) ----
+     :hover already pauses on pointer devices via CSS; this adds
+     the same behavior for touch, since touch has no hover state. */
+  document.querySelectorAll('.logo-track').forEach(function (track) {
+    track.addEventListener('touchstart', function () {
+      track.classList.add('is-paused');
+    }, { passive: true });
+    track.addEventListener('touchend', function () {
+      track.classList.remove('is-paused');
+    });
+  });
+
 });
