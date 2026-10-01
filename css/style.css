@@ -1121,6 +1121,18 @@ section {
    Teams / Corporate page
    ========================================================================== */
 
+/* ---- Bolder body copy for readability ---- */
+.page-corporate p {
+  font-weight: 600;
+}
+.page-corporate .subhead,
+.page-corporate .affirmation,
+.page-corporate .testimonial-card p.quote,
+.page-corporate .tier-note:not(.tier-note-emphasis),
+.page-corporate .references-line p {
+  font-weight: 400;
+}
+
 /* ---- Stat tiles ---- */
 .stat-grid {
   display: grid;
