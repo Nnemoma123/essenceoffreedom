@@ -11,7 +11,7 @@
   --color-text: #3A2A22;
   --color-text-soft: #6B534A;
   --color-cream: #FBF6EE;
-  --color-forest: #2F4538;
+  --color-olive: #5F6B3A;
 
   --font-display: 'Maharlika', Georgia, 'Times New Roman', serif;
   --font-body: 'Raleway', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
@@ -130,25 +130,26 @@ section {
   color: var(--color-maroon);
 }
 
-.section-forest {
-  background: var(--color-forest);
+.section-olive {
+  background: var(--color-olive);
 }
-.section-forest h1,
-.section-forest h2,
-.section-forest h3,
-.section-forest h4 {
+.section-olive h1,
+.section-olive h2,
+.section-olive h3,
+.section-olive h4 {
   color: var(--color-cream);
 }
-.section-forest .section-head p,
-.section-forest > .container > p,
-.section-forest p.lead {
+.section-olive .section-head p,
+.section-olive > .container > p,
+.section-olive p.lead {
   color: rgba(251, 246, 238, 0.8);
 }
-.section-forest .guide-copy .role {
+.section-olive .guide-copy .role {
   color: var(--color-brown);
 }
-.section-forest .guide-copy p {
+.section-olive .guide-copy p {
   color: rgba(251, 246, 238, 0.85);
+  font-weight: 600;
 }
 
 /* ---- Buttons ---- */
