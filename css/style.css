@@ -145,7 +145,12 @@ section {
   color: rgba(251, 246, 238, 0.8);
 }
 .section-olive .guide-copy .role {
-  color: var(--color-brown);
+  color: var(--color-cream);
+  font-size: 1.15rem;
+}
+.section-olive .logo-band .eyebrow {
+  color: var(--color-cream);
+  font-size: 1rem;
 }
 .section-olive .guide-copy p {
   color: rgba(251, 246, 238, 0.85);
