@@ -7,11 +7,20 @@ document.addEventListener('DOMContentLoaded', function () {
   var nav = document.getElementById('site-nav');
 
   if (hamburger && nav) {
+    var closeSubmenus = function () {
+      nav.querySelectorAll('.nav-item.is-open').forEach(function (item) {
+        item.classList.remove('is-open');
+        var toggle = item.querySelector('.submenu-toggle');
+        if (toggle) toggle.setAttribute('aria-expanded', 'false');
+      });
+    };
+
     var closeNav = function () {
       nav.classList.remove('is-open');
       hamburger.classList.remove('is-open');
       hamburger.setAttribute('aria-expanded', 'false');
       document.body.style.overflow = '';
+      closeSubmenus();
     };
 
     var openNav = function () {
@@ -44,6 +53,16 @@ document.addEventListener('DOMContentLoaded', function () {
       if (window.innerWidth > 900) closeNav();
     });
   }
+
+  /* ---- Nav submenu toggle (tap, for touch/mobile; desktop also has it on hover via CSS) ---- */
+  document.querySelectorAll('.submenu-toggle').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var item = btn.closest('.nav-item');
+      if (!item) return;
+      var isOpen = item.classList.toggle('is-open');
+      btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+  });
 
   /* ---- Image placeholder fallback ----
      Each placeholder wraps an <img> pointed at /images/<filename>.

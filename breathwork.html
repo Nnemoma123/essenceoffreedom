@@ -19,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Maharlika&family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="icon" type="image/png" href="images/favicon.png">
-<link rel="stylesheet" href="css/style.css?v=3">
+<link rel="stylesheet" href="css/style.css?v=4">
 </head>
 <body>
 
@@ -29,7 +29,17 @@
     <nav class="site-nav" id="site-nav">
       <a href="index.html#about">About</a>
       <a href="index.html#pathways">Pathways</a>
-      <a href="breathwork.html">Breathwork</a>
+      <div class="nav-item has-submenu">
+        <a href="breathwork.html" class="nav-link">Breathwork</a>
+        <button type="button" class="submenu-toggle" aria-expanded="false" aria-label="Toggle Breathwork submenu">
+          <svg width="10" height="6" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="submenu">
+          <a href="https://calendly.com/nnemoma-essenceoffree/1-1-breathwork-session" target="_blank" rel="noopener">For Individuals</a>
+          <a href="/corporatewellness">For Organizations</a>
+          <a href="https://forms.gle/Xy9LPUsFKpya6npB6" target="_blank" rel="noopener">For Schools</a>
+        </div>
+      </div>
       <a href="blog.html">Blog</a>
       <a href="contact.html">Contact</a>
       <a href="index.html#pathways" class="btn btn-primary nav-cta">Work With Me</a>
@@ -50,8 +60,8 @@
       <p class="subhead">Rooted in Igbo Wisdom</p>
       <p class="lead">Guided through breath, movement, sound, and community — a journey back to peace, strength, and joy for yourself, your team or community.</p>
       <div class="page-hero-ctas">
-        <a href="#work-together" class="btn btn-primary">Bring Ndidi To Your People →</a>
-        <a href="#one-on-one" class="btn btn-outline">1:1 Sessions →</a>
+        <a href="#who-this-is-for" class="btn btn-primary">Bring Ndidi To Your People →</a>
+        <a href="https://calendly.com/nnemoma-essenceoffree/1-1-breathwork-session" target="_blank" rel="noopener" class="btn btn-outline">1:1 Sessions →</a>
       </div>
       <div class="page-hero-image">
         <div class="img-ph">
@@ -67,8 +77,12 @@
     <div class="container">
       <div class="section-head">
         <h2>What Is Ndidi Breathwork™</h2>
-        <p><em>Ndidi</em> (n-DEE-dee) is Igbo for steadfastness, patient endurance, and the quiet strength to return to your true self. This community healing practice combines breath, sound and movement with live African instruments and music to help you remember who you are at the core. It is a one-of-a-kind experience!</p>
+        <p><em>Ndidi</em> (n-DEE-dee) Breathwork™ is African-centered, not a borrowed wellness trend. The sessions are guided by breath, sound, and movement with live African instruments and music.</p>
       </div>
+
+      <blockquote class="founder-quote quote-box">
+        <em>Ndidi</em> means steadfastness in Igbo, the patient endurance to keep returning to your body, breath by breath, until what has been stored there finally moves and you feel alive again.
+      </blockquote>
 
       <div class="pillars-grid">
         <div class="pillar-card">
@@ -89,7 +103,7 @@
       </div>
 
       <p class="affirmation">
-        I remain grounded. I persist with gentleness. I return to myself.
+        I am free. I am alive. Energy flows through me.
       </p>
     </div>
   </section>
@@ -106,7 +120,7 @@
       <div class="guide-copy">
         <h2>Meet Your Guide</h2>
         <span class="role">Nnemoma Chukwumerije, LMSW — African-Centered Breathwork Guide &amp; Life Coach</span>
-        <p>Nnemoma is a medicine woman, breathwork guide, energy healer, and life coach — leading every session as a licensed social worker (LMSW, Columbia), trained in trauma-informed facilitation. Her path didn't start in a wellness space — it started in a cubicle, doing everything "right" as the firstborn daughter of Nigerian immigrants, quietly depressed the whole time. Breathwork moved what nothing else could. Today she leads Ndidi Breathwork™ for conferences, schools, retreats, companies, and communities worldwide.</p>
+        <p>Nnemoma is a medicine woman, breathwork guide, energy healer, and life coach — leading every session as a licensed social worker (LMSW, Columbia), trained in trauma-informed facilitation. Her path didn't start in a wellness space — it started in a cubicle, doing everything "right" as the firstborn daughter of Nigerian immigrants, quietly depressed the whole time. Breathwork moved what nothing else could. Today she leads Ndidi Breathwork™ through 1:1 sessions, conferences, schools, retreats, companies, and communities worldwide.</p>
       </div>
     </div>
   </section>
@@ -128,11 +142,11 @@
   </div>
 
   <!-- ============ HOW THIS HELPS ============ -->
-  <section class="section section-dark">
+  <section id="who-this-is-for" class="section section-dark">
     <div class="container">
       <div class="section-head">
         <h2>How This Helps Participants</h2>
-        <p>Breathwork works through the nervous system, not just the mind — discharging stress, quieting the inner critic, creating space for real clarity. Sound and movement carry that further, out of the head and into the body. Rooted in Igbo tradition rather than borrowed from it, this practice carries an ancestral depth and specificity you won't find in a generic breathwork class.</p>
+        <p>Breathwork works through the nervous system, not just the mind — discharging stress, quieting the inner critic, creating space for real clarity. Sound and movement carry that further, out of the head and into the body. Rooted in Nigerian tradition rather than borrowed from it, this practice carries an ancestral depth and specificity you won't find in a generic breathwork class.</p>
       </div>
 
       <div class="tag-list">
@@ -143,31 +157,21 @@
         <span class="tag-pill">Emotional Release</span>
       </div>
 
-      <div class="audience-grid">
+      <div class="audience-grid audience-grid-3">
         <div class="audience-card">
           <h4>Individuals</h4>
-          <p>A private return to yourself, away from who you have to be for everyone else</p>
+          <p>A private return to yourself, away from who you have to be for everyone else.</p>
+          <a href="https://calendly.com/nnemoma-essenceoffree/1-1-breathwork-session" target="_blank" rel="noopener" class="btn-text">Learn More →</a>
         </div>
         <div class="audience-card">
-          <h4>Teams</h4>
-          <p>More present and connected than an icebreaker could manage</p>
+          <h4>Organizations</h4>
+          <p>Teams, conferences, and retreats that need a reset more real than an icebreaker.</p>
+          <a href="/corporatewellness" class="btn-text">Learn More →</a>
         </div>
         <div class="audience-card">
-          <h4>Conferences</h4>
-          <p>The genuine reset people remember after the keynote is forgotten</p>
-        </div>
-        <div class="audience-card">
-          <h4>Students/Staff</h4>
-          <p>A rare invitation to slow down and practice self-awareness</p>
-        </div>
-        <div class="audience-card">
-          <h4>Retreats</h4>
-          <p>The anchor experience that turns strangers into a room that breathes together</p>
-        </div>
-        <div class="audience-card coming-soon">
-          <span class="badge-soon">Coming Soon</span>
-          <h4>Facilitator Training</h4>
-          <p>Learn to guide Ndidi Breathwork™ yourself — a certification path for practitioners ready to carry this medicine to their own communities.</p>
+          <h4>High Schools &amp; Colleges</h4>
+          <p>A rare invitation for students and staff to slow down and practice self-awareness together.</p>
+          <a href="https://forms.gle/Xy9LPUsFKpya6npB6" target="_blank" rel="noopener" class="btn-text">Learn More →</a>
         </div>
       </div>
     </div>
@@ -247,34 +251,18 @@
     </div>
   </section>
 
-  <!-- ============ WAYS TO WORK TOGETHER ============ -->
-  <section id="work-together" class="section section-alt">
-    <div class="container">
-      <div class="section-head">
-        <h2>Ways To Work Together</h2>
-        <p><a href="/corporatewellness" class="btn-text">Corporate Wellness</a> · Retreats · Workshops · Facilitator Training</p>
-      </div>
-
-      <div class="tiers-grid">
-        <div class="tier-card">
-          <h3>60-Minute Workshop</h3>
-          <p>Team offsites, conference breakouts, single-day wellness pushes. A nervous-system reset and a simple breath practice. In-person or virtual.</p>
-        </div>
-        <div class="tier-card">
-          <h3>Half-Day Immersion</h3>
-          <p>Leadership retreats, school in-service days, deeper team-culture work. A full arc through breath, sound, movement, and reflection.</p>
-        </div>
-        <div class="tier-card">
-          <h3>Custom Experience</h3>
-          <p>Multi-day conferences, recurring corporate programs, school partnerships. A shaped-to-you container. In-person or virtual.</p>
-        </div>
-      </div>
-
-      <p class="tier-note">Pricing varies by group needs</p>
-
-      <div class="tier-cta">
-        <a href="https://forms.gle/Xy9LPUsFKpya6npB6" target="_blank" rel="noopener" class="btn btn-primary btn-lg">Submit a Request →</a>
-      </div>
+  <!-- ============ CLOSING BANNER ============ -->
+  <section class="closing-banner">
+    <div class="img-ph">
+      <img src="images/closing-banner.jpg" alt="Ceremonial breathwork instruments and beads">
+      <div class="ph-label">Closing Banner<small>closing-banner.jpg</small></div>
+    </div>
+  </section>
+  <section class="section section-dark">
+    <div class="container closing-content">
+      <h2>Your Breath Is Waiting</h2>
+      <p class="lead">Wherever you're starting from, there's a path back to yourself.</p>
+      <a href="#who-this-is-for" class="btn btn-primary btn-lg">Find Your Path →</a>
 
       <div class="follow-ig">
         <a href="https://www.instagram.com/ndidi.breathwork/" target="_blank" rel="noopener">
@@ -282,38 +270,6 @@
           Check us out on Instagram: @ndidi.breathwork
         </a>
       </div>
-    </div>
-  </section>
-
-  <!-- ============ 1:1 SESSIONS ============ -->
-  <section id="one-on-one" class="section section-dark">
-    <div class="container">
-      <div class="section-head">
-        <h2>Looking For 1:1 Sessions?</h2>
-        <p>Sometimes the room you need to breathe in is just you.</p>
-      </div>
-
-      <div class="session-card">
-        <p>This 45-minute private session gives space to set an intention, breathe through what's in the way, and leave with clarity on your next step.</p>
-
-        <ul class="included">
-          <li>Intention setting</li>
-          <li>Guided conscious connected breathwork</li>
-          <li>Sound and rhythm</li>
-          <li>Closing journaling</li>
-        </ul>
-
-        <p class="investment">45 minutes · $70</p>
-        <a href="https://calendly.com/nnemoma-essenceoffree/1-1-breathwork-session" target="_blank" rel="noopener" class="btn btn-primary">Book Your 1:1 Session →</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ CLOSING BANNER ============ -->
-  <section class="closing-banner">
-    <div class="img-ph">
-      <img src="images/closing-banner.jpg" alt="Ceremonial breathwork instruments and beads">
-      <div class="ph-label">Closing Banner<small>closing-banner.jpg</small></div>
     </div>
   </section>
 

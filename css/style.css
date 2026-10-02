@@ -268,6 +268,60 @@ section {
 }
 .site-nav a:not(.btn):hover::after { transform: scaleX(1); }
 
+.nav-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+.submenu-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  color: var(--color-cream);
+  transition: transform 0.2s ease;
+}
+.nav-item:hover .submenu-toggle,
+.nav-item.is-open .submenu-toggle {
+  transform: rotate(180deg);
+}
+.submenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin-top: 14px;
+  display: flex;
+  flex-direction: column;
+  min-width: 200px;
+  padding: 10px;
+  background: var(--color-maroon);
+  border: 1px solid rgba(251, 246, 238, 0.14);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-soft);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-6px);
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
+  z-index: 1001;
+}
+.submenu a {
+  padding: 10px 12px !important;
+  border-radius: 6px;
+  font-size: 0.9rem !important;
+  white-space: nowrap;
+}
+.submenu a::after { display: none; }
+.submenu a:hover { background: rgba(251, 246, 238, 0.08); }
+.nav-item:hover .submenu,
+.nav-item.is-open .submenu,
+.nav-item:focus-within .submenu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
 .hamburger {
   display: none;
   flex-direction: column;
@@ -321,6 +375,44 @@ section {
     margin-top: 20px;
     width: 100%;
     justify-content: center;
+  }
+
+  .nav-item {
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border-bottom: 1px solid rgba(190, 141, 95, 0.2);
+  }
+  .nav-item .nav-link {
+    border-bottom: none;
+  }
+  .submenu-toggle {
+    width: 40px;
+    height: 40px;
+  }
+  .submenu {
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+    margin-top: 0;
+    min-width: 0;
+    width: 100%;
+    display: none;
+  }
+  .nav-item.is-open .submenu {
+    display: flex;
+    padding-bottom: 12px;
+  }
+  .submenu a {
+    padding: 10px 0 10px 16px !important;
+    font-size: 0.95rem !important;
+    color: rgba(251, 246, 238, 0.85);
+    border-bottom: none !important;
   }
 }
 
@@ -871,6 +963,19 @@ section {
 }
 @media (max-width: 560px) {
   .audience-grid { grid-template-columns: 1fr; }
+}
+
+.audience-card .btn-text {
+  display: inline-block;
+  margin-top: 12px;
+}
+.audience-grid-3 {
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (max-width: 860px) {
+  .audience-grid-3 { grid-template-columns: 1fr; }
 }
 
 .steps-banner {
