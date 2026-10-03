@@ -1044,9 +1044,11 @@ section {
   color: var(--color-maroon);
 }
 .tier-cta { text-align: center; margin-top: 36px; }
+.tiers-grid-bottom { margin-top: 26px; }
 
 @media (max-width: 860px) {
   .tiers-grid { grid-template-columns: 1fr; }
+  .tiers-grid-bottom { margin-top: 0; }
 }
 
 .session-card {
@@ -1241,6 +1243,13 @@ section {
 .page-corporate .tier-note:not(.tier-note-emphasis),
 .page-corporate .references-line p {
   font-weight: 400;
+}
+
+.page-schools .page-hero .eyebrow {
+  font-size: 1.05rem;
+}
+.page-schools .closing-content {
+  padding-top: 36px;
 }
 
 /* ---- Stat tiles ---- */
