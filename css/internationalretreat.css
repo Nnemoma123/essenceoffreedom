@@ -1,0 +1,301 @@
+/* ==========================================================================
+   Carry My Gifts — International Retreat fundraising page
+   Scoped under .retreat-page so nothing here leaks to the rest of the site.
+   ========================================================================== */
+
+.retreat-page {
+  --retreat-bg: #FDF2F0;
+  background: var(--retreat-bg);
+  color: var(--color-maroon);
+}
+.retreat-page main p {
+  color: var(--color-maroon);
+}
+
+.retreat-page a:focus-visible,
+.retreat-page button:focus-visible {
+  outline: 2px solid var(--color-maroon);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.retreat-page main .btn-primary {
+  color: #FDF2F0;
+}
+
+/* ---- Hero ---- */
+.retreat-hero {
+  padding: 56px 0 72px;
+}
+.retreat-hero-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 56px;
+  align-items: center;
+}
+.retreat-hero-copy h1 {
+  margin-top: 6px;
+}
+.retreat-hero-copy .lead {
+  margin-top: 20px;
+  font-size: 1.15rem;
+  line-height: 1.6;
+}
+.retreat-hero-ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 32px;
+}
+
+.retreat-hero-photo {
+  position: relative;
+}
+.retreat-hero-photo::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border: 2px solid var(--color-brown);
+  border-radius: calc(var(--radius-lg) + 8px);
+  transform: translate(12px, 12px);
+  z-index: 0;
+}
+.retreat-hero-photo .img-ph {
+  position: relative;
+  z-index: 1;
+  aspect-ratio: 4 / 5;
+  min-height: 340px;
+  box-shadow: var(--shadow-soft);
+}
+
+@media (max-width: 860px) {
+  .retreat-hero-grid { grid-template-columns: 1fr; }
+  .retreat-hero-photo { order: -1; max-width: 420px; margin: 0 auto; }
+}
+
+/* ---- Story ---- */
+.retreat-story {
+  padding: 24px 0 72px;
+}
+.retreat-story-col {
+  max-width: 680px;
+  margin: 0 auto;
+}
+.retreat-story-col .greeting {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  color: var(--color-maroon);
+  margin-bottom: 28px;
+}
+.retreat-story-col p + p {
+  margin-top: 22px;
+}
+.retreat-story-col a {
+  color: var(--color-pink);
+  font-weight: 600;
+  border-bottom: 1.5px solid transparent;
+  transition: border-color 0.2s ease;
+}
+.retreat-story-col a:hover {
+  border-bottom-color: var(--color-pink);
+}
+
+.retreat-reveal {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  line-height: 1.5;
+  color: var(--color-maroon);
+  margin-top: 44px !important;
+  margin-bottom: 44px !important;
+}
+
+.retreat-callout {
+  margin-top: 28px;
+  padding: 18px 22px;
+  background: var(--color-white);
+  border-left: 3px solid var(--color-brown);
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  font-size: 0.98rem;
+}
+.retreat-callout p {
+  margin: 0;
+}
+.retreat-callout p + p {
+  margin-top: 10px !important;
+}
+
+.retreat-photo-wide {
+  margin: 36px 0;
+}
+.retreat-photo-wide .img-ph {
+  aspect-ratio: 3 / 2;
+  min-height: 260px;
+}
+.retreat-photo-wide figcaption {
+  margin-top: 10px;
+  font-style: italic;
+  font-size: 0.88rem;
+  color: var(--color-brown);
+  text-align: center;
+}
+
+/* ---- The Ask ---- */
+.retreat-ask {
+  padding: 24px 0 80px;
+}
+.retreat-ask-card {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 40px;
+  align-items: center;
+  max-width: 980px;
+  margin: 0 auto;
+  background: var(--color-white);
+  border-top: 4px solid var(--color-brown);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+  padding: 40px;
+}
+.retreat-ask-photo .img-ph {
+  aspect-ratio: 4 / 5;
+  min-height: 260px;
+}
+.retreat-ask-text {
+  text-align: left;
+}
+.retreat-ask-text p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 760px) {
+  .retreat-ask-card {
+    grid-template-columns: 1fr;
+    padding: 28px;
+    gap: 24px;
+  }
+  .retreat-ask-photo { max-width: 320px; margin: 0 auto; }
+  .retreat-ask-text { text-align: center; }
+}
+
+/* ---- Ways to support ---- */
+.retreat-support {
+  padding: 24px 0 88px;
+}
+.support-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 16px;
+}
+.support-grid > * { min-width: 0; }
+.support-card {
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  padding: 32px 26px;
+  box-shadow: var(--shadow-soft);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.support-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 12px;
+}
+.support-card p {
+  font-size: 0.95rem;
+  flex-grow: 1;
+}
+.support-card .btn {
+  margin-top: 20px;
+  align-self: flex-start;
+}
+
+.copy-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 14px;
+  padding: 10px 14px;
+  background: var(--retreat-bg);
+  border-radius: var(--radius-md);
+}
+.copy-row:first-of-type {
+  margin-top: 18px;
+}
+.copy-row-text {
+  font-size: 0.92rem;
+}
+.copy-row-text strong {
+  display: block;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-brown);
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+.copy-btn {
+  flex-shrink: 0;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--color-maroon);
+  border: 1.5px solid var(--color-brown);
+  border-radius: 999px;
+  padding: 7px 14px;
+  min-height: 44px;
+  min-width: 44px;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+.copy-btn:hover {
+  background: var(--color-brown);
+  color: var(--color-white);
+}
+.copy-btn.is-copied {
+  background: var(--color-maroon);
+  color: #FDF2F0;
+  border-color: var(--color-maroon);
+}
+
+.share-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 20px;
+}
+.share-actions .btn {
+  min-height: 44px;
+}
+
+@media (max-width: 860px) {
+  .support-grid { grid-template-columns: 1fr; }
+}
+
+/* ---- Closing ---- */
+.retreat-closing {
+  padding: 24px 0 96px;
+  text-align: center;
+}
+.retreat-closing-col {
+  max-width: 600px;
+  margin: 0 auto;
+}
+.retreat-closing-col p + p {
+  margin-top: 18px;
+}
+.retreat-signature {
+  margin-top: 40px;
+}
+.retreat-signature .sig-name {
+  font-family: var(--font-display);
+  font-size: 1.7rem;
+  color: var(--color-maroon);
+}
+.retreat-signature .sig-role {
+  display: block;
+  margin-top: 6px;
+  font-size: 0.9rem;
+  color: var(--color-brown);
+  font-weight: 600;
+}
