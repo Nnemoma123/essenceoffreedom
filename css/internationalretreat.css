@@ -160,6 +160,24 @@
   aspect-ratio: 4 / 5;
   min-height: 260px;
 }
+.retreat-ask-photo .img-ph img {
+  object-position: center 20%;
+}
+
+/* ---- Ceremony banner (full-width, between support and closing) ---- */
+.retreat-banner {
+  padding: 0;
+}
+.retreat-banner .img-ph {
+  border-radius: 0;
+  aspect-ratio: 16 / 9;
+  min-height: 220px;
+}
+@media (max-width: 640px) {
+  .retreat-banner .img-ph {
+    aspect-ratio: 4 / 3;
+  }
+}
 .retreat-ask-text {
   text-align: left;
 }
