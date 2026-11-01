@@ -216,6 +216,7 @@ body:not(.build) #playbook-root .build-only{display:none!important}
 #playbook-root .gate h1{font-size:30px;margin-bottom:6px}
 #playbook-root .gate .tagline{font-size:18px;margin:0 0 20px}
 #playbook-root .gate form{display:flex;flex-direction:column;gap:12px;text-align:left}
+#playbook-root .gate .gate-help{font-size:14px;line-height:1.55;color:var(--soft-brown);margin:18px 0 0}
 #playbook-root .gate .err{color:var(--maroon);font-weight:600;font-size:14px;min-height:20px}
 #playbook-root .toast{position:fixed;left:50%;bottom:22px;transform:translateX(-50%) translateY(20px);background:var(--espresso);color:var(--cream);padding:11px 20px;border-radius:var(--radius-full);font-weight:600;font-size:14px;opacity:0;transition:.25s;z-index:60;pointer-events:none}
 #playbook-root .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
@@ -410,6 +411,7 @@ html{scroll-behavior:auto}
         <div class="err" id="pwErr" role="alert"></div>
         <button class="pill primary" type="submit">Enter</button>
       </form>
+      <p class="gate-help">Your password is in your welcome email from Nnemoma. It should arrive within a few minutes. Check your promotions or spam folder if you don’t see it.</p>
     </div>
   </div>
 
