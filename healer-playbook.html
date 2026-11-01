@@ -31,8 +31,8 @@ var CONFIG = {
   // Password buyers type to open the Playbook. Leave "" to turn the lock off.
   PASSWORD: "healEr496!!zh",
 
-  // Section 9: your course
-  COURSE_URL: "",
+  // Section 9: The Unshrinking Audit link
+  AUDIT_URL: "https://essenceoffreedom.kit.com/unshrinkingaudit",
 
   // Section 9: 1:1 coaching call booking link
   COACHING_URL: "https://calendly.com/nnemoma-essenceoffree/medicineactivationcoaching",
@@ -249,7 +249,6 @@ body:not(.build) #playbook-root .build-only{display:none!important}
 #playbook-root .fu-h{margin:16px 0 0!important}
 #playbook-root .nudge{margin:10px 0 0 36px;background:var(--warm-sand);border-radius:12px;padding:14px 16px}
 #playbook-root .nudge p{margin:0 0 10px;font-size:15.5px}
-#playbook-root .course-sub{font-family:var(--font-display);color:var(--earth-gold);font-size:19px;margin:4px 0 16px}
 #playbook-root .course-list{position:relative;padding-left:20px;margin:0 0 20px}
 #playbook-root .course-list li{margin-bottom:8px}
 #playbook-root .course-list li::marker{color:var(--earth-gold)}
@@ -263,22 +262,23 @@ body:not(.build) #playbook-root .build-only{display:none!important}
 #playbook-root .check input[type=radio]::after{width:10px;height:10px;border:0;border-radius:50%;background:var(--white);transform:none}
 #playbook-root .quiz-result{background:var(--maroon);color:var(--cream);border-radius:var(--radius-lg);padding:20px;margin-top:16px}
 #playbook-root .quiz-result h4{color:var(--cream);font-size:22px;margin:0 0 8px}
-#playbook-root .mentor{margin-top:22px}
 #playbook-root .win-proof{margin-top:30px}
 #playbook-root .win-proof .proof-img{max-width:420px}
-#playbook-root .course > h3{margin-top:0!important}
-#playbook-root .buy-row{position:relative;display:flex;flex-wrap:wrap;align-items:center;gap:12px 16px}
-#playbook-root .buy-row s{opacity:.6;font-weight:500}
-#playbook-root .code-chip{background:rgba(251,246,238,.14);border:1.5px dashed var(--earth-gold);border-radius:var(--radius-full);padding:9px 16px;font-size:14.5px;color:var(--cream)}
-#playbook-root .code-chip b{letter-spacing:.08em}
+#playbook-root .course > h3{margin-top:6px!important;position:relative}
+#playbook-root .course .spots{color:var(--earth-gold);font-weight:600;margin:0 0 18px}
+#playbook-root .ways{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:18px 0}
+#playbook-root .way{display:flex;flex-direction:column;margin:0;min-width:0}
+#playbook-root .way h4{font-family:var(--font-display);font-size:23px;color:var(--maroon);margin:0 0 10px}
+#playbook-root .way p{flex:1;margin:0 0 18px}
+#playbook-root .way .pill{align-self:flex-start}
 @media (max-width:767px){
   #playbook-root .nudge{margin-left:0}
   #playbook-root .photo-img{max-width:100%}
   #playbook-root .proof-img{max-width:100%}
   #playbook-root .quiz-result .pill{width:100%}
-  #playbook-root .buy-row .pill,
-  #playbook-root .code-chip{width:100%;justify-content:center;text-align:center}
-  #playbook-root #coachBtn{width:100%}
+  #playbook-root .course .pill{width:100%}
+  #playbook-root .ways{grid-template-columns:1fr}
+  #playbook-root .way .pill{align-self:stretch;width:100%}
 }
 @media (max-width:767px){
   #playbook-root{overflow-x:clip;max-width:100%}
@@ -332,8 +332,7 @@ body:not(.build) #playbook-root .build-only{display:none!important}
   #playbook-root .row-card .rh{flex-wrap:wrap}
   #playbook-root .pill{min-height:48px}
   #playbook-root .tpl .pill,
-  #playbook-root #shareBtn,
-  #playbook-root #courseBtn{width:100%}
+  #playbook-root #shareBtn{width:100%}
   #playbook-root .done-row .pill{width:100%}
   #playbook-root .pagenav{gap:10px}
   #playbook-root .pagenav .pill{flex:1 1 0;min-width:0}
@@ -364,7 +363,7 @@ body:not(.build) #playbook-root .build-only{display:none!important}
 #playbook-root section{scroll-margin-top:0}
 #playbook-root ::before,#playbook-root ::after{box-sizing:content-box}
 /* jump links inside the Playbook land below the site header + Playbook bar */
-#playbook-root #course,#playbook-root #quizResult{scroll-margin-top:calc(var(--top) + 12px)}
+#playbook-root #quizResult{scroll-margin-top:calc(var(--top) + 12px)}
 /* the site uses smooth page scrolling; the Playbook restores your scroll spot instantly */
 html{scroll-behavior:auto}
 </style>
@@ -652,23 +651,20 @@ html{scroll-behavior:auto}
       <p>Congratulations, healer! You sent your invitations, and that took courage. Remember, this is how confidence is built. The more reps you do, the easier it becomes. I recommend putting a 45 to 60 minute freedom block on your calendar every week and sending out 10 invitations a week. You've done it once, you can do it again.</p>
       <p><strong>You are ancestrally guided, you are freakin powerful, and it's time to show up like it. You just did.</strong></p>
 
-      <div class="course" id="course"><div class="rings" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
-        <h3>You sent the invitations. Now someone replies.</h3>
-        <p>That's the moment most healers freeze. What do you say? How do you price it? What if they hesitate? The Booked and Blessed Healer walks you through exactly what happens next, step by step, so a yes becomes a booked date and a maybe doesn't go cold.</p>
-        <div class="eyebrow" style="position:relative;margin-top:18px">The Booked and Blessed Healer</div>
-        <p class="course-sub">A course to take you from overlooked to the go-to healer in your community</p>
-        <p style="margin-bottom:8px"><strong>Inside, you'll learn how to:</strong></p>
+      <div class="course"><div class="rings" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+        <div class="eyebrow" style="position:relative">Healer CEO Activation</div>
+        <h3>You sent the invitations. Now let's make you the go-to.</h3>
+        <p>Inviting is the first step. Becoming the healer your community points to takes more than a few good messages. In Healer CEO Activation, my 12-week 1:1 mentorship, you get me fully in your business with you. We revamp how you show up, set up real systems that keep clients flowing in, and blend the magical with the practical, so you can be well paid for your medicine and stop wondering when your next client will come in or how you'll cover rent this month.</p>
         <ul class="course-list">
-          <li>Elevate your work to premium and update your messaging so it connects with your ideal client</li>
-          <li>Price your sessions with confidence, with pricing support</li>
-          <li>Send polished offers with proposal templates included</li>
-          <li>Keep every invitation organized with the outreach tracker</li>
-          <li>Turn one-time clients into subscription clients who book with you regularly</li>
-          <li>Perfect your online visibility so people find you easily and know you're the go-to healer, without posting random content every day</li>
+          <li>Get radically clear on what makes your medicine yours, and who you're here to serve</li>
+          <li>Invite your community in with my email templates, pitch scripts, proposal template and pricing guidance</li>
+          <li>Turn one-off sessions into recurring monthly bookings, and raise your rates without apologizing</li>
+          <li>Re-launch your online presence so the moment someone lands on your page, they're an instant yes</li>
+          <li>Work through the fear, doubt and old wounds around being seen, with me in your corner the whole way</li>
         </ul>
-        <div class="buy-row"><a class="pill cream" id="courseBtn" href="#" target="_blank" rel="noopener">Get the course, <s>$297</s>&nbsp;$237</a><span class="code-chip">Use code <b>PLAYBOOK</b> for 20% off</span></div>
+        <p class="spots">Only 5 spots this season.</p>
+        <p style="margin:0"><a class="pill cream" id="ceoBtn" href="#" target="_blank" rel="noopener">DM me INFO on Instagram</a></p>
       </div>
-      <div class="needs" data-need="course-link"><b>Needs from me</b>Your course page link for the button.</div>
 
       <div class="card" id="quiz">
         <div class="eyebrow">Quick quiz</div>
@@ -679,14 +675,19 @@ html{scroll-behavior:auto}
         <button class="pill primary" id="quizBtn">See my next step</button>
         <div class="quiz-result" id="quizResult" hidden></div>
       </div>
-      <div class="needs" data-need="quiz-words"><b>Needs from me</b>Approve the quiz wording (Claude drafted it).</div>
 
-      <h3>Want 1:1 support?</h3>
-      <p>Not sure what your next move is, or want a second set of eyes on your outreach? Book a 1:1 coaching call. In one focused session, we'll look at where your practice is right now, clear what's holding back your invitations, and map out your next aligned steps, so you leave knowing exactly what to do.</p>
-      <p><a class="pill primary" id="coachBtn" href="#" target="_blank" rel="noopener">Book a 1:1 coaching call</a></p>
-      <div class="sand mentor">
-        <p><strong>Really serious about creating a profitable healing business and want longer-term support?</strong></p>
-        <p style="margin:0">Get my full eyes on your business. In my 3-month mentorship, we'll amplify your messaging and your unique medicine, hold you accountable to your intentional invitations, and upgrade your online presence so you can become the go-to healer in your community. DM me INFO on Instagram at <a href="#" class="ig-link">@_essenceoffreedom</a> to learn more.</p>
+      <h3>Other ways to work with me</h3>
+      <div class="ways">
+        <div class="card way">
+          <h4>The Unshrinking Audit, $111</h4>
+          <p>Tired of posting aimlessly with no one booking sessions? I'll review your bio, content and positioning across Instagram, Threads and your website or linktree. Then I'll hand back a custom report that names your real differentiator, plus 5 to 6 changes you can make right away so your dream clients recognize you the moment they land on your page. Delivered in 3 to 5 days.</p>
+          <a class="pill primary" id="auditBtn" href="#" target="_blank" rel="noopener">Get your Unshrinking Audit</a>
+        </div>
+        <div class="card way">
+          <h4>1:1 Coaching Call</h4>
+          <p>Not sure what your next move is, or want a second set of eyes on your outreach? In one focused session, we'll look at where your practice is right now, clear what's holding back your invitations, and map out your next aligned steps, so you leave knowing exactly what to do.</p>
+          <a class="pill primary" id="coachBtn" href="#" target="_blank" rel="noopener">Book a 1:1 coaching call</a>
+        </div>
       </div>
     </div>
   </section>
@@ -782,8 +783,8 @@ html{scroll-behavior:auto}
     /* ---------- links and audio ---------- */
     var audioSrc = CONFIG.WELCOME_AUDIO_URL || WELCOME_AUDIO_EMBED;
     if (audioSrc){ $("#welcomeAudio").src = audioSrc; $("#audioCard").hidden = false; }
-    if (CONFIG.COURSE_URL) $("#courseBtn").href = CONFIG.COURSE_URL;
-    else $("#courseBtn").addEventListener("click", function(e){ e.preventDefault(); });
+    $("#ceoBtn").href = IG;
+    $("#auditBtn").href = CONFIG.AUDIT_URL;
     $("#coachBtn").href = CONFIG.COACHING_URL;
     $$(".ig-link").forEach(function(a){ a.href = IG; a.target = "_blank"; a.rel = "noopener"; });
 
@@ -965,23 +966,23 @@ html{scroll-behavior:auto}
 
     /* ---------- which next step quiz ---------- */
     var QUIZ = [
-      {q:"Where are you right now?", a:[
-        {t:"I sent my invitations and I'm ready to keep going on my own, with the right tools.", r:"course"},
+      {q:"Where are you right now with your healing business?", a:[
+        {t:"I want my online presence to show who I really am, so people recognize me right away.", r:"audit"},
         {t:"I want someone to look at my business with me and help me see my next move.", r:"call"},
-        {t:"I'm ready to build a real, profitable healing business and want support for the long haul.", r:"mentor"}]},
+        {t:"I'm ready to build a real, profitable healing business and want 1:1 support to get there.", r:"mentor"}]},
       {q:"What would help you most right now?", a:[
-        {t:"Scripts, pricing support and templates I can use at my own pace", r:"course"},
-        {t:"One focused session to get clear on my next steps", r:"call"},
-        {t:"Accountability and guidance over a few months", r:"mentor"}]},
-      {q:"How do you like to get support?", a:[
-        {t:"Self-paced, on my own time", r:"course"},
+        {t:"An outside eye on my social media, so it actually brings clients in", r:"audit"},
+        {t:"One focused coaching session", r:"call"},
+        {t:"A full system, accountability and someone in my corner for 12 weeks", r:"mentor"}]},
+      {q:"How much support do you want?", a:[
+        {t:"A custom report I can act on myself", r:"audit"},
         {t:"One deep-dive conversation", r:"call"},
         {t:"Ongoing 1:1 support", r:"mentor"}]}
     ];
     var RESULT = {
-      course: {h:"The Booked and Blessed Healer Course is your next step.", p:"You're ready to keep going on your own with messaging that connects with your ideal client, online visibility that gets you found, and the scripts, pricing support, proposal templates and tracker that turn replies into booked dates. Use code PLAYBOOK for 20% off.", btn:"Get the course, $237 with code PLAYBOOK", href:function(){ return CONFIG.COURSE_URL || "#course"; }},
+      audit:  {h:"The Unshrinking Audit is your next step.", p:"You're ready to be recognized the moment someone finds you online. Tired of posting aimlessly with no one booking sessions? I'll name your real differentiator and give you 5 to 6 changes to make right away.", btn:"Get your Unshrinking Audit, $111", href:function(){ return CONFIG.AUDIT_URL; }},
       call:   {h:"A 1:1 coaching call is your next step.", p:"One focused session to look at where your healing business is right now and map out your next aligned steps.", btn:"Book a 1:1 coaching call", href:function(){ return CONFIG.COACHING_URL; }},
-      mentor: {h:"My 3-month mentorship is your next step.", p:"You're ready for full eyes on your business, real accountability and longer-term support.", btn:"DM me INFO on Instagram", href:function(){ return IG; }}
+      mentor: {h:"Healer CEO Activation is your next step.", p:"You're ready to be known for your work, booked consistently in your community, and paid like the leader you are. Let's build it together over 12 weeks.", btn:"DM me INFO on Instagram", href:function(){ return IG; }}
     };
     var qa = get("quiz", {});
     $("#quizQs").innerHTML = QUIZ.map(function(item, i){
@@ -993,16 +994,14 @@ html{scroll-behavior:auto}
       if (e.target.name){ qa[+e.target.name.slice(1)] = +e.target.value; set("quiz", qa); $("#quizErr").textContent=""; }
     });
     function showResult(){
-      var score = {course:0, call:0, mentor:0};
+      var score = {audit:0, call:0, mentor:0};
       QUIZ.forEach(function(item, i){ score[item.a[qa[i]].r]++; });
       var pick = Object.keys(score).sort(function(x,y){ return score[y]-score[x]; })[0];
       if (score[pick] === 1) pick = "call";
-      var r = RESULT[pick], href = r.href(), ext = href.charAt(0) !== "#";
+      var r = RESULT[pick];
       var box = $("#quizResult");
-      box.innerHTML = '<h4>'+esc(r.h)+'</h4><p>'+esc(r.p)+'</p><a class="pill cream" href="'+esc(href)+'"'+(ext?' target="_blank" rel="noopener"':'')+' id="quizGo">'+esc(r.btn)+'</a>';
+      box.innerHTML = '<h4>'+esc(r.h)+'</h4><p>'+esc(r.p)+'</p><a class="pill cream" href="'+esc(r.href())+'" target="_blank" rel="noopener" id="quizGo">'+esc(r.btn)+'</a>';
       box.hidden = false;
-      var go = $("#quizGo");
-      if (!ext) go.addEventListener("click", function(e){ e.preventDefault(); $("#course").scrollIntoView({behavior:"smooth"}); });
     }
     $("#quizBtn").addEventListener("click", function(){
       for (var i=0;i<QUIZ.length;i++){ if (typeof qa[i] !== "number"){ $("#quizErr").textContent = "Answer all 3 questions first."; return; } }
