@@ -3,3 +3,9 @@
 
 /held/*
   X-Robots-Tag: noindex, nofollow, noarchive
+
+/blackfriday
+  X-Robots-Tag: noindex, nofollow, noarchive
+
+/blackfriday/*
+  X-Robots-Tag: noindex, nofollow, noarchive
